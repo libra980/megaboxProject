@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라이프시어터,메가박스</title>
+
+    <!--css-->
+    <link rel="stylesheet" href="./css/reset.css"> 
+    <link rel="stylesheet" href="./css/style.css"> 
+
+    <!--js-->
+    <script defer src="./js/main.js"></script>
+    <!--favicon-->
+    <link rel="shortcut icon" href="./image/favicon (1).ico">
+
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Nanum+Myeongjo&display=swap&subset=korean" rel="stylesheet">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+  <!--js-->
+    <div class="body-wrap">
+        <header id="header" class="main-header no-bg none-ad">
+            <h1 class="ci">
+                <a href="/" title="MEGABOX 메인으로 가기">MEGABOX : Life Theater</a>
+            </h1>
+    
+            <div class="util-area">
+                <div class="left-link">
+                    <a href="https://www.megabox.co.kr/benefit/viplounge" title="VIP LOUNGE">VIP LOUNGE</a>
+                    <a href="https://www.megabox.co.kr/benefit/membership" title="멤버십">멤버십</a>
+                    <a href="https://www.megabox.co.kr/support" title="고객센터">고객센터</a>
+                </div>
+                <div class="right-link">
+                    <div class="before">
+                        <a title="로그인">로그인</a>
+                        <a href="/join" title="회원가입">회원가입</a>
+                        <a href="/booking">빠른예매</a>
+                    </div>
+                </div>
+            </div>
+            <div class="link-area">
+                <a href="#" id="btn-sitemap-open" class="header-open-layer btn-layer-sitemap" title="사이트맵">사이트맵</a>
+                <a href="#" id="btn-sitemap-close" class="btn-close-sitemap"></a>
+                <a href="#layer_header_search" class="header-open-layer btn-layer-search" title="검색">검색</a>
+                <a href="/booking/timetable" class="link-ticket" title="상영시간표">상영시간표</a>
+                <a href="#layer_mymega" class="header-open-layer btn-layer-mymega" title="나의 메가박스">나의 메가박스</a>
+            </div>
+            <nav id="gnb">
+                <ul class="gnb-depth1">
+                    <li>
+                        <a href="https://www.megabox.co.kr/movie" class="gnb-txt-movie" title="영화">영화</a>
+                        <div class="gnb-depth2">
+                            <ul>
+                                <li>
+                                    <a href="https://www.megabox.co.kr/movie" title="전체영화">전체영화</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.megabox.co.kr/nscreen" title="N스크린">N스크린</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.megabox.co.kr/curation/specialcontent" title="큐레이션">큐레이션</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.megabox.co.kr/moviepost/all" title="무비포스트">무비포스트</a>
+                                </li>
+    
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="https://www.megabox.co.kr/booking" class="gnb-txt-reserve" title="예매">예매</a>
+                        <div class="gnb-depth2">
+                            <ul>
+                                <li><a href="https://www.megabox.co.kr/booking" title="빠른예매">빠른예매</a></li>
+                                <li><a href="https://www.megabox.co.kr/booking/timetable" title="상영시간표">상영시간표</a></li>
+                                <li><a href="https://www.megabox.co.kr/booking/privatebooking" title="더 부티크 프라이빗 예매">더 부티크 프라이빗 예매</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="https://www.megabox.co.kr/theater/list" class="gnb-txt-theater" title="극장">극장</a>
+                        <div class="gnb-depth2">
+                            <ul>
+                                <li><a href="https://www.megabox.co.kr/theater/list" title="전체극장">전체극장</a></li>
+                                <li><a href="https://www.megabox.co.kr/specialtheater/list" title="특별관">특별관</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class=""><a href="https://www.megabox.co.kr/event" class="gnb-txt-event" title="이벤트">이벤트</a>
+                        <div class="gnb-depth2">
+                            <ul>
+                                <li><a href="https://www.megabox.co.kr/event" title="진행중 이벤트">진행중 이벤트</a></li>
+                                <li><a href="https://www.megabox.co.kr/event/end" title="지난 이벤트">지난 이벤트</a></li>
+                                <li><a href="https://www.megabox.co.kr/event/winner/list?currPage=1&searchText=&" title="당첨자발표">당첨자발표</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="https://www.megabox.co.kr/store" class="gnb-txt-store" title="스토어">스토어</a>
+                    </li>
+                    <li>
+                        <a href="https://www.megabox.co.kr/benefit/membership" class="gnb-txt-benefit" title="혜택">혜택</a>
+                        <div class="gnb-depth2">
+                            <ul>
+                                <li><a href="/benefit/membership" title="메가박스 멤버십">메가박스 멤버십</a></li>
+                                <li><a href="/benefit/discount/guide" title="제휴/할인">제휴/할인</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div id="layer_sitemap" class="header-layer layer-sitemap on">
+                <!-- wrap -->
+                <div class="wrap">
+                    <a href="" class="link-acc" title="사이트맵 레이어 입니다.">사이트맵 레이어 입니다.</a>
+        
+                    <p class="tit">SITEMAP</p>
+        
+                    <div class="list position-1">
+                        <p class="tit-depth">영화</p>
+        
+                        <ul class="list-depth">
+                            <li><a href="https://www.megabox.co.kr/movie" title="전체영화">전체영화</a></li>
+                            <li><a href="https://www.megabox.co.kr/curation/specialcontent" title="큐레이션">큐레이션</a></li>
+                            <li><a href=""  title="영화제">영화제</a></li>
+                            <li><a href="https://www.megabox.co.kr/moviepost/all" title="무비포스트">무비포스트</a></li>
+                        </ul>
+                    </div>
+        
+                    <div class="list position-2">
+                        <p class="tit-depth">예매</p>
+        
+                        <ul class="list-depth">
+                            <li><a href="https://www.megabox.co.kr/booking" title="빠른예매">빠른예매</a></li>
+                            <li><a href="https://www.megabox.co.kr/booking/timetable" title="상영시간표">상영시간표</a></li>
+                            <li><a href="https://www.megabox.co.kr/booking/privatebooking" title="더 부티크 프라빗 예매">더 부티크 프라이빗 예매</a></li>
+                        </ul>
+                    </div>
+        
+                    <div class="list position-3">
+                        <p class="tit-depth">극장</p>
+        
+                        <ul class="list-depth">
+                            <li><a href="https://www.megabox.co.kr/theater/list" title="전체극장">전체극장</a></li>
+                            <li><a href="https://www.megabox.co.kr/specialtheater/list" title="특별관">특별관</a></li>
+                        </ul>
+                    </div>
+        
+                    <div class="list position-4">
+                        <p class="tit-depth">이벤트</p>
+        
+                        <ul class="list-depth">
+                            <li><a href="https://www.megabox.co.kr/event" title="진행중 이벤트">진행중 이벤트</a></li>
+                            <li><a href="https://www.megabox.co.kr/event/end" title="지난 이벤트">지난 이벤트</a></li>
+                            <li><a href="https://www.megabox.co.kr/event/winner/list?currPage=1&searchText=&" title="당첨자발표">당첨자발표</a></li>
+    
+                        </ul>
+                    </div>
+        
+                    <div class="list position-5">
+                        <p class="tit-depth">스토어</p>
+        
+                        <ul class="list-depth">
+                            <li><a href="javascript:void(0)" title="새로운 상품">새로운 상품</a></li>
+                            <li><a href="javascript:void(0)" title="메가티켓">메가티켓</a></li>
+                            <li><a href="javascript:void(0)" title="메가찬스">메가찬스</a></li>
+                            <li><a href="javascript:void(0)" title="팝콘/음료/굿즈">팝콘/음료/굿즈</a></li>
+                        </ul>
+                    </div>
+                    <div class="list position-6">
+                        <p class="tit-depth">나의 메가박스</p>
+                        <ul class="list-depth mymage">
+                            
+                                    <li><a href="" title="나의 메가박스 홈">나의 메가박스 홈</a></li>
+                                    <li><a href="" title="예매/구매내역">예매/구매내역</a></li>
+                                    <li><a href="" title="영화관람권">영화관람권</a></li>
+                                    <li><a href="" title="스토어교환권">스토어교환권</a></li>
+                                    <li><a href="" title="할인/제휴쿠폰">할인/제휴쿠폰</a></li>
+                                    
+                                    <li><a href="" title="멤버십포인트">멤버십포인트</a></li>
+                                    <li><a href="" title="나의 무비스토리">나의 무비스토리</a></li>
+                                    <li><a href="" title="나의 이벤트 응모내역">나의 이벤트 응모내역</a></li>
+                                    <li><a href="" title="나의 문의내역">나의 문의내역</a></li>
+                                    <li><a href="" title="자주쓰는 할인 카드">자주쓰는 할인 카드</a></li>
+                                    <li><a href="" title="회원정보">회원정보</a></li>
+                                
+                        </ul>
+                    </div>
+        
+                    <div class="list position-7">
+                        <p class="tit-depth">혜택</p>
+        
+                        <ul class="list-depth">
+                            <li><a href="https://www.megabox.co.kr/benefit/membership" title="멤버십 안내">멤버십 안내</a></li>
+                            <li><a href="https://www.megabox.co.kr/benefit/viplounge" title="VIP LOUNGE">VIP LOUNGE</a></li>
+                            <li><a href="https://www.megabox.co.kr/benefit/discount/guide" title="제휴/할인">제휴/할인</a></li>
+                        </ul>
+                    </div>
+        
+                    <div class="list position-8">
+                        <p class="tit-depth">고객센터</p>
+        
+                        <ul class="list-depth">
+                            <li><a href="https://www.megabox.co.kr/support" title="고객센터 홈">고객센터 홈</a></li>
+                            <li><a href="https://www.megabox.co.kr/support/faq" title="자주묻는질문">자주묻는질문</a></li>
+                            <li><a href="https://www.megabox.co.kr/support/notice" title="공지사항">공지사항</a></li>
+                            <li><a href="https://www.megabox.co.kr/support/inquiry" title="1:1문의">1:1문의</a></li>
+                            <li><a href="https://www.megabox.co.kr/support/rent" title="단체/대관문의">단체/대관문의</a></li>
+                            <li><a href="https://www.megabox.co.kr/support/lost" title="분실물문의">분실물문의</a></li>
+                        </ul>
+                    </div>
+        
+                    <div class="list position-9">
+                        <p class="tit-depth">회사소개</p>
+        
+                        <ul class="list-depth">
+                            <li><a href="https://www.megabox.co.kr/megaboxinfo" target="_blank" title="메가박스소개">메가박스소개</a></li>
+                            <li><a href="https://www.megabox.co.kr/socialcontribution" target="_blank" title="사회공헌">사회공헌</a></li>
+                            <li><a href="https://www.megabox.co.kr/advertize" target="_blank" title="홍보자료">홍보자료</a></li>
+                            <li><a href="https://www.megabox.co.kr/partner" target="_blank" title="제휴/부대사업문의">제휴/부대사업문의</a></li>
+                            <li><a href="https://www.megabox.co.kr/onlinereport" target="_blank" title="온라인제보센터">온라인제보센터</a></li>
+                            <li><a href="https://www.megabox.co.kr/ir" target="_blank" title="자료">IR자료</a></li>
+                            <li><a href="https://www.megabox.co.kr/recruit" target="_blank" title="인재채용림">인재채용</a></li>
+                            <li><a href="https://jebo.joonganggroup.com/main.do" target="_blank" title="윤리경영">윤리경영</a></li>
+                        </ul>
+                    </div>
+        
+                    <div class="list position-10">
+                        <p class="tit-depth">이용정책</p>
+        
+                        <ul class="list-depth">
+                            <li><a href="https://www.megabox.co.kr/support/terms" title="이용약관">이용약관</a></li>
+                            <li><a href="https://www.megabox.co.kr/support/privacy" title="개인정보처리방침">개인정보처리방침</a></li>
+                            <li><a href="https://www.megabox.co.kr/support/screenrule" title="스크린수배정에관한기준">스크린수배정에관한기준</a></li>
+                        </ul>
+                    </div>
+    
+                </div>
+                <!--// wrap -->
+            </div>
+    
+    
+    
+        </header>
+        <div class="main-page">
+            <div id="main-section01" class="section main-movie on">
+                <div class="bg">
+                    <div class="bg-pattern"></div>
+                    <img src="https://img.megabox.co.kr/SharedImg/2021/02/09/tcSwrnOvxSHd40PXLg6X7GhR5IA2c8qo_380.jpg" alt="귀멸의 칼날_액션 하이라이트 포스터.jpg" onerror="noImg(this, 'main');">
+                </div>
+                <div class="cont-area">
+
+					<!-- tab-sorting -->
+					<div class="tab-sorting">
+						<button type="button" class="on" sort="boxoRankList" name="btnSort">박스오피스</button>
+					</div>
+					<!-- tab-sorting -->
+
+					<a href="https://www.megabox.co.kr/movie" class="more-movie" title="더 많은 영화보기">
+						더 많은 영화보기 <i class="iconset ico-more-corss gray"></i>
+					</a>
+
+					<!-- main-movie-list -->
+					<div class="main-movie-list">
+						<ol class="list">
+							<!-- 3개의 list를  loop 한다-->
+							<!-- 박스오피스 시작 -->
+									<!-- 각 map 별 첫번째 li 에 first클래스 추가 -->
+
+										<!-- 각 map 별 첫번째 li 에 first클래스 추가 -->
+                            <li name="li_accmAdncList" class="first">
+                                <a href="https://www.megabox.co.kr/movie-detail?rpstMovieNo=20071800" id="boxoffice-first"  class="movie-list-info" title="영화상세 보기">
+                                    <div class="screen-type2">
+                                        <p><img src="./image/mov_top_tag_db.png" alt="dolby"></p>
+                                        <p><img src="./image/mov_top_tag_mx.png" alt="mx"></p>
+                                        </div>
+                                    <p class="rank">1<span class="ir">위</span></p>
+                                    <!-- to 개발 : alt 값에 영화 제목 출력 -->
+                                    <img src="https://img.megabox.co.kr/SharedImg/2021/02/01/qDLdOQKdvIeLyniUM7DX567IaJeyJmbv_420.jpg" alt="극장판 귀멸의 칼날: 무한열차편" class="poster" onerror="noImg(this, 'main');">
+                                        <div id="first" class="wrap">
+                                        <div class="summary">
+                                            혈귀로 변해버린 여동생 ‘네즈코’를 인간으로 되돌릴 단서를 찾아 비밀조직 귀살대에 들어간 ‘탄지로.’<br>‘젠이츠’, ‘이노스케’와 새로운 임무 수행을 위해 무한열차에 탑승 후</div>
+                                        <!--
+                                            관람 전이 더 높을 때
+                                            <div class="my-score small">
+
+                                            관람 후가 더 높을 때
+                                            <div class="my-score big">
+
+                                            관람 후가 더 같을 때
+                                            <div class="my-score equal">
+                                            -->
+                                        <div class="score">
+                                            <div class="preview">
+                                                <p class="tit">관람평</p>
+                                                <p class="number">9.5<span class="ir">점</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="btn-util">
+                                    <button type="button" class="button btn-like" rpst-movie-no="20071800">
+                                        <i title="보고싶어 설정 안함" class="iconset ico-heart-toggle-gray"></i>
+                                            7.3k
+                                            </button>
+                                    <div class="case">
+                                        <!-- 개봉 예매가능 기본-->
+                                                <a href="javascript:moveBokdPage('20071800');" class="button gblue" title="영화 예매하기">예매</a>
+                                            </div>
+                                    </div>
+                            </li>
+                            <li name="li_boxoRankList" class="">
+                                <a href="javascript:gfn_moveDetail('21021600')" id="boxoffice-second"  class="movie-list-info" title="영화상세 보기">
+                                    <div class="screen-type2">
+                                        <p><img src="./image/mov_top_tag_db.png" alt="dolby"></p>
+                                        <p><img src="./image/mov_top_tag_mx.png" alt="mx"></p>
+                                        </div>
+                                    <p class="rank">2<span class="ir">위</span></p>
+                                    <!-- to 개발 : alt 값에 영화 제목 출력 -->
+                                    <img src="https://img.megabox.co.kr/SharedImg/2021/04/06/6wixFbxfDyq6DiainX4uu1AS2xXVUY3q_420.jpg" alt="내일의 기억" class="poster" onerror="noImg(this, 'main');">
+                                        <div id="second" class="wrap">
+                                        <div class="summary">
+                                            깨어난 후, 다른 사람의 미래가 보이기 시작했다<br><br>사고로 기억을 잃은 채 깨어난 수진 옆엔<br>자상한 남편 지훈이 그녀를 세심하게 돌봐주고 있다.<br>그리고 집에 돌아온 후</div>
+                                        <!--
+                                            관람 전이 더 높을 때
+                                            <div class="my-score small">
+
+                                            관람 후가 더 높을 때
+                                            <div class="my-score big">
+
+                                            관람 후가 더 같을 때
+                                            <div class="my-score equal">
+                                            -->
+                                        <div class="score">
+                                            <div class="preview">
+                                                <p class="tit">관람평</p>
+                                                <p class="number">7.8<span class="ir">점</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="btn-util">
+                                    <button type="button" class="button btn-like" rpst-movie-no="21021600">
+                                        <i title="보고싶어 설정 안함" class="iconset ico-heart-toggle-gray"></i>
+                                            150</button>
+                                    <div class="case">
+                                        <!-- 개봉 예매가능 기본-->
+                                                <a href="javascript:moveBokdPage('21021600');" class="button gblue" title="영화 예매하기">예매</a>
+                                            </div>
+                                    </div>
+                            </li>
+                        <!-- 각 map 별 첫번째 li 에 first클래스 추가 -->
+
+                            <!-- 각 map 별 첫번째 li 에 first클래스 추가 -->
+                            <li name="li_boxoRankList" class="">
+                                <a href="javascript:gfn_moveDetail('21020700')"  id="boxoffice-third" class="movie-list-info" title="영화상세 보기">
+                                    <div class="screen-type2">
+                                        <p><img src="./image/mov_top_tag_mx.png" alt="mx"></p>
+                                        </div>
+                                    <p class="rank">3<span class="ir">위</span></p>
+                                    <!-- to 개발 : alt 값에 영화 제목 출력 -->
+                                    <img src="https://img.megabox.co.kr/SharedImg/2021/03/17/T0Gxjhvezw5BiVD14RyhdhyezLYADKeV_420.jpg" alt="크루즈 패밀리: 뉴 에이지" class="poster" onerror="noImg(this, 'main');">
+                                        <div id="third" class="wrap">
+                                        <div class="summary">
+                                            인류 최초 가족들의 새로운 세상을 향한 스펙터클한 모험이 시작된다!<br><br>동굴을 떠나 새로운 거주지를 찾아 나선 크루즈 패밀리.<br>우여곡절 끝에 찾은 완벽한 트리 하우스에서 진화된 인류, 베터맨 패밀리와 마주한다.</div>
+                                        <!--
+                                            관람 전이 더 높을 때
+                                            <div class="my-score small">
+
+                                            관람 후가 더 높을 때
+                                            <div class="my-score big">
+
+                                            관람 후가 더 같을 때
+                                            <div class="my-score equal">
+                                            -->
+                                        <div class="score">
+                                            <div class="preview">
+                                                <p class="tit">관람평</p>
+                                                <p class="number">0<span class="ir">점</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="btn-util">
+                                    <button type="button" class="button btn-like" rpst-movie-no="21020700">
+                                        <i title="보고싶어 설정 안함" class="iconset ico-heart-toggle-gray"></i>
+                                            48</button>
+                                    <div class="case">
+                                        <!-- 개봉 예매가능 기본-->
+                                                <a href="javascript:moveBokdPage('21020700');" class="button gblue" title="영화 예매하기">예매</a>
+                                            </div>
+                                    </div>
+                            </li>
+                            <li name="li_boxoRankList" class="">
+                                <a href="javascript:gfn_moveDetail('21016900')" id="boxoffice-fourth"  class="movie-list-info" title="영화상세 보기">
+                                    <div class="screen-type2">
+                                        </div>
+                                    <p class="rank">4<span class="ir">위</span></p>
+                                    <!-- to 개발 : alt 값에 영화 제목 출력 -->
+                                    <img src="https://img.megabox.co.kr/SharedImg/2021/04/05/2uP4BnPsmjxh6HAKRUQfJoJV8Xis4kBq_420.jpg" alt="더 스파이" class="poster" onerror="noImg(this, 'main');">
+                                        <div id="fourth" class="wrap">
+                                        <div class="summary summary-fourth">
+                                            전운이 감도는 1960년 냉전시대, 소련 군사정보국 ‘올레크 대령’은<br>정부의 눈을 피해 핵전쟁 위기를 막을 중대 기밀을 CIA에 전하고자 한다.<br><br>CIA는 MI6와 협력하여 소련의 기밀 문서를 입수하기 위해<br>영국 사업가 ‘그레빌 윈’을 스파이로 고용해 잠입에 성공한다.</div>
+                                        <!--
+                                            관람 전이 더 높을 때
+                                            <div class="my-score small">
+
+                                            관람 후가 더 높을 때
+                                            <div class="my-score big">
+
+                                            관람 후가 더 같을 때
+                                            <div class="my-score equal">
+                                            -->
+                                        <div class="score">
+                                            <div class="preview">
+                                                <p class="tit">관람평</p>
+                                                <p class="number">0<span class="ir">점</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="btn-util">
+                                    <button type="button" class="button btn-like" rpst-movie-no="21016900">
+                                        <i title="보고싶어 설정 안함" class="iconset ico-heart-toggle-gray"></i>
+                                            284</button>
+                                    <div class="case">
+                                        <!-- 개봉 예매가능 기본-->
+                                                <a href="javascript:moveBokdPage('21016900');" class="button gblue" title="영화 예매하기">예매</a>
+                                            </div>
+                                    </div>
+                            </li>
+                        </ol>    
+					</div>
+					<!--// main-movie-list -->
+
+					<div class="search-link">
+						<div class="cell">
+							<div class="search">
+								<input type="text" placeholder="영화명을 입력해 주세요" title="영화 검색" class="input-text" id="movieName">
+								<button type="button" class="btn" id="btnSearch"><i class="iconset ico-search-w"></i> 검색</button>
+							</div>
+						</div>
+
+						<div class="cell"><a href="/booking/timetable" title="상영시간표 보기"><i class="iconset ico-schedule-main"></i> 상영시간표</a></div>
+						<div class="cell"><a href="/movie" title="박스오피스 보기"><i class="iconset ico-boxoffice-main"></i> 박스오피스</a></div>
+						<div class="cell"><a href="/booking" title="빠른예매 보기"><i class="iconset ico-quick-reserve-main"></i> 빠른예매</a></div>
+					</div>
+					<div class="moving-mouse">
+						<img class="iconset" alt="" src="./image/ico-mouse.png" style="top: 9px;">
+					</div>
+				</div>
+
+            </div>
+            <div id="main_section02" class="section main-benefit">
+				<!-- wrap -->
+				<div class="wrap">
+					<!-- 혜택 시작 -->
+					<div class="tit-util">
+							<h2 class="tit">혜택</h2>
+							<a href="javascript:void(0)" onclick="NetfunnelChk.aTag('EVENT_LIST','/event');return false;" class="btn-more-cross purple" title="혜택 더보기">더보기</a>
+						</div>
+						<!--
+							왼쪽 글씨 이미지 사이즈 300 * 230, 오른쪽 이미지 635 * 325
+						 -->
+						<div class="swiper-container slider main-condition">
+							<div class="swiper-wrapper slider-view" style=" width: 1100px;">
+								<div class="cell swiper-slide" >
+									<div class="position">
+										<div class="txt" style="top: 0px; opacity: 1;"><a href="https://www.megabox.co.kr/event/detail?eventNo=9602" target="_self" title=""><img src="https://img.megabox.co.kr/SharedImg/BnftMng/2021/04/21/B28G057yzU1JG7kOyzkJ4u0t3FOkvLCN.jpg" alt="" onerror="noImg(this, 'main');"></a></div>
+										<div class="bg" style="left: 300px; opacity: 1;"><a href="https://www.megabox.co.kr/event/detail?eventNo=9602" target="_self" title=""><img src="https://img.megabox.co.kr/SharedImg/BnftMng/2021/04/21/27UQyETizJAKOLsNximgswqk19uZ0yQG.jpg" alt="" onerror="noImg(this, 'main');"></a></div>
+									</div>
+								</div>
+								<div class="cell swiper-slide" >
+									<div class="position">
+										<div class="txt" style="top: 0px; opacity: 1;"><a href="https://www.megabox.co.kr/event/detail?eventNo=9558" target="_self" title=""><img src="https://img.megabox.co.kr/SharedImg/BnftMng/2021/04/13/dsyXE1uruCvCwfyGyKd8mK8yCQg6vfS5.jpg" alt="" onerror="noImg(this, 'main');"></a></div>
+										<div class="bg" style="left: 300px; opacity: 1;"><a href="https://www.megabox.co.kr/event/detail?eventNo=9558" target="_self" title=""><img src="https://img.megabox.co.kr/SharedImg/BnftMng/2021/04/13/OJTPVoVe8NLC3TFJsxhZSOiiSGTi7V5U.jpg" alt="" onerror="noImg(this, 'main');"></a></div>
+									</div>
+								</div>
+								<div class="cell swiper-slide">
+									<div class="position">
+										<div class="txt" style="top: 0px; opacity: 1;"><a href="https://www.megabox.co.kr/event/detail?eventNo=9512" target="_self" title=""><img src="https://img.megabox.co.kr/SharedImg/BnftMng/2021/04/05/4wFoas4sPxEdQ1iU3aa09OM9CyyoCOZ7.jpg" alt="" onerror="noImg(this, 'main');"></a></div>
+										<div class="bg" style="left: 300px; opacity: 1;"><a href="https://www.megabox.co.kr/event/detail?eventNo=9512" target="_self" title=""><img src="https://img.megabox.co.kr/SharedImg/BnftMng/2021/04/05/FyAIxqHoTJPwxFrzom1jS8LHjcvstysJ.jpg" alt="" onerror="noImg(this, 'main');"></a></div>
+									</div>
+								</div>
+								<div class="cell swiper-slide">
+									<div class="position">
+										<div class="txt" style="top: 0px; opacity: 1;"><a href="https://www.megabox.co.kr/event/detail?eventNo=9466" target="_self" title=""><img src="https://img.megabox.co.kr/SharedImg/BnftMng/2021/03/29/86PmObfkFeGPe4HhBqguYNC9Q8SWccNh.jpg" alt="" onerror="noImg(this, 'main');"></a></div>
+										<div class="bg" style="left: 300px; opacity: 1;"><a href="https://www.megabox.co.kr/event/detail?eventNo=9466" target="_self" title=""><img src="https://img.megabox.co.kr/SharedImg/BnftMng/2021/03/29/5iWX3k7MCx82IB1natzUqdOzbAfTLuEe.jpg" alt="" onerror="noImg(this, 'main');"></a></div>
+									</div>
+								</div>
+								<div class="cell swiper-slide">
+									<div class="position">
+										<div class="txt" style="top: 0px; opacity: 1;"><a href="https://www.megabox.co.kr/event/detail?eventNo=9456" target="_self" title=""><img src="https://img.megabox.co.kr/SharedImg/BnftMng/2021/03/29/DLs1MjdRVx1ZfQJAfzCYPrdsIzjG6Cqa.jpg" alt="" onerror="noImg(this, 'main');"></a></div>
+										<div class="bg" style="left: 300px; opacity: 1;"><a href="https://www.megabox.co.kr/event/detail?eventNo=9456" target="_self" title=""><img src="https://img.megabox.co.kr/SharedImg/BnftMng/2021/03/29/SVGWTn8JN8hCf2wktouBdKEHVow3DtCn.jpg" alt="" onerror="noImg(this, 'main');"></a></div>
+									</div>
+								</div>
+								<div class="cell swiper-slide">
+									<div class="position">
+										<div class="txt" style="top: 0px; opacity: 1;"><a href="https://www.megabox.co.kr/event/detail?eventNo=9358" target="_self" title=""><img src="https://img.megabox.co.kr/SharedImg/BnftMng/2021/03/05/5iEZxkffs0c8JrNa9vXdQwLixSXIJt13.jpg" alt="" onerror="noImg(this, 'main');"></a></div>
+										<div class="bg" style="left: 300px; opacity: 1;"><a href="https://www.megabox.co.kr/event/detail?eventNo=9358" target="_self" title=""><img src="https://img.megabox.co.kr/SharedImg/BnftMng/2021/03/05/B1inLjTCekxNqlv6sojWezVQYdLq1JGl.jpg" alt="" onerror="noImg(this, 'main');"></a></div>
+									</div>
+								</div>
+								<div class="cell swiper-slide">
+									<div class="position">
+										<div class="txt" style="top: 0px; opacity: 1;"><a href="https://www.megabox.co.kr/event/detail?eventNo=9187" target="_self" title=""><img src="https://img.megabox.co.kr/SharedImg/BnftMng/2021/02/01/f7RPSplY1eWEFFhKNBDJK4JIXKv9NBZK.jpg" alt="" onerror="noImg(this, 'main');"></a></div>
+										<div class="bg" style="left: 300px; opacity: 1;"><a href="https://www.megabox.co.kr/event/detail?eventNo=9187" target="_self" title=""><img src="https://img.megabox.co.kr/SharedImg/BnftMng/2021/02/01/fZ8glF2ggujTRrF5vtRuE1iE2UjjV1oF.jpg" alt="" onerror="noImg(this, 'main');"></a></div>
+									</div>
+								</div>
+								<div class="cell swiper-slide"  >
+									<div class="position">
+										<div class="txt" style="top: 0px; opacity: 1;"><a href="https://www.megabox.co.kr/event/detail?eventNo=9043" target="_self" title=""><img src="https://img.megabox.co.kr/SharedImg/BnftMng/2020/12/23/U3yNmqKAkk9NCSNMe8wOoYyEp4erJOuy.jpg" alt="" onerror="noImg(this, 'main');"></a></div>
+										<div class="bg" style="left: 300px; opacity: 1;"><a href="https://www.megabox.co.kr/event/detail?eventNo=9043" target="_self" title=""><img src="https://img.megabox.co.kr/SharedImg/BnftMng/2020/12/23/NyVYX7lqdjM68x3qNmxGjvAMEkP3PYHi.jpg" alt="" onerror="noImg(this, 'main');"></a></div>
+									</div>
+								</div>
+								<div class="cell swiper-slide"  >
+									<div class="position">
+										<div class="txt" style="top: 0px; opacity: 1;"><a href="https://www.megabox.co.kr/event/detail?eventNo=8865" target="_self" title=""><img src="https://img.megabox.co.kr/SharedImg/BnftMng/2020/12/04/fgQy66J460De1YuUdYg8LojfCzo48nbB.jpg" alt="" onerror="noImg(this, 'main');"></a></div>
+										<div class="bg" style="left: 300px; opacity: 1;"><a href="https://www.megabox.co.kr/event/detail?eventNo=8865" target="_self" title=""><img src="https://img.megabox.co.kr/SharedImg/BnftMng/2020/12/04/aY97qRe6764bp83rs8b8rtbt0lbC7eLn.jpg" alt="" onerror="noImg(this, 'main');"></a></div>
+									</div>
+								</div>
+								</div>
+							<div class="slider-control">
+
+
+								<div class="util">
+									<button type="button" class="btn-prev" style="opacity: 1;">이전 이벤트 보기</button>
+									<button type="button" class="btn-next" style="opacity: 1;">다음 이벤트 보기</button>
+
+									<button type="button" id="btn-pause" class="btn-pause">일시정지</button>
+									<button type="button" id="btn-play" class="btn-play">자동재생</button>
+								</div>
+
+
+                                
+							</div>
+						</div>
+
+
+						<div class="brn-ad">
+							<div class="banner">
+								<div class="size">
+											<a href="#" data-no="9358" data-netfunnel="N" class="eventBtn" title="">
+												<img src="https://img.megabox.co.kr/SharedImg/event/2021/03/05/9QskdwL1zUcEAJoueuLNvKzUHNsq3zcY.jpg" alt="관람평쓰고 포인트 받자!" onerror="noImg(this, 'main');">
+												</a>
+										</div>
+										<div class="size small">
+											<a href="#" data-no="8865" data-netfunnel="N" class="eventBtn" title="">
+												<img src="https://img.megabox.co.kr/SharedImg/event/2020/10/27/iaqx1sdAqvW8HLxO5Rsevdh08yYPdoDn.jpg" alt="[메가박스X현대카드] 현대M포인트 금토일 5,000원 할인!" onerror="noImg(this, 'main');">
+												</a>
+										</div>
+									</div>
+							<!-- 광고영역 -->
+							<div class="ad-img">
+								<script data-id="M_rwl-o8QV2xFMa0Oy93qQ" name="megabox_p/main/main@main_middle_event_415x530?mlink=341" src="//cast.imp.joins.com/persona.js" async=""></script><script src="//cast.imp.joins.com/body/M_rwl-o8QV2xFMa0Oy93qQ/ANVfpb516L549ityARKeBSZhRglpr42NOOGAGiuH70uEAM4qWzAZAbYtY0p3UTJjUFF4TzY4N3Q2T2tWZmZnAstB2B9IMj8pFgPLQdgfSDI_KRY.js"></script><div id="M_rwl-o8QV2xFMa0Oy93qQ"><iframe src="//ad.imp.joins.com/html/megabox_p/main/main@main_middle_event_415x530?_cid=M_rwl-o8QV2xFMa0Oy93qQ&amp;_uid=ANVfpb516L549ityARKeBSZhRglpr42NOOGAGiuH70uEAM4qWzAZAbYtY0p3UTJjUFF4TzY4N3Q2T2tWZmZnAstB2B9IMj8pFgPLQdgfSDI_KRY&amp;_ref=https%3A%2F%2Fwww.megabox.co.kr%2F" title="메인 혜택 우측배너영역" height="530px" width="415px" name="mliframe" scrolling="no" frameborder="0" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0"></iframe></div>
+							</div>
+							<!-- 광고영역 -->
+						</div>
+					<!-- 혜택 종료 -->
+
+					<div class="menu-link">
+						<div class="cell vip"><a href="/benefit/viplounge" title="VIP LOUNGE 페이지로 이동">VIP LOUNGE</a></div>
+						<div class="cell membership"><a href="/benefit/membership" title="멤버십 페이지로 이동">멤버십</a></div>
+						<div class="cell card"><a href="/benefit/discount/guide" title="할인카드안내 페이지로 이동">할인카드안내</a></div>
+						<div class="cell event"><a href="javascript:void(0)" onclick="NetfunnelChk.aTag('EVENT_LIST','/event');return false;" title="이벤트 페이지로 이동">이벤트</a></div>
+						<div class="cell store"><a href="javascript:void(0)" onclick="NetfunnelChk.aTag('STORE_LIST','/store');return false;" title="스토어 페이지로 이동">스토어</a></div>
+					</div>
+
+					<!-- grand-open -->
+					<!--// grand-open -->
+				</div>
+				<!--// wrap -->
+			</div>
+            <div id="main_section03" class="section main-curation">
+				<!-- wrap -->
+				<div class="wrap">
+					<div class="tit-util">
+						<h2 class="tit">큐레이션</h2>
+
+						<div class="right">
+							<a href="/curation/filmsociety" title="큐레이션 더보기">
+								큐레이션 더보기 <i class="iconset ico-more-corss gray"></i>
+							</a>
+						</div>
+					</div>
+
+					<!-- curation-area -->
+					<div class="curation-area">
+						<!-- curr-img -->
+								<div class="curr-img">
+									<p class="bage classic">메가박스 클래식소사이어티</p>
+										<div class="img">
+										<a href="javascript:gfn_moveDetail('21025300');" title="영화상세 보기">
+											<img src="https://img.megabox.co.kr/SharedImg/2021/04/05/CgtNF2UemsJ7TpKrmlPa3nPkHJnvo5Y5_420.jpg" alt="[오페라] 코지 판 투테" onerror="noImg(this, 'main');">
+											</a>
+									</div>
+
+									<div class="btn-group justify">
+										<div class="left">
+											<a href="javascript:gfn_moveDetail('21025300');" class="button" title="영화상세 보기">상세정보</a>
+										</div>
+										<div class="right">
+											<a href="javascript:moveBokdPage('21025300');" class="button gblue" title="영화 예매하기">예매</a>
+												</div>
+									</div>
+
+									<div class="info classic">
+										<p class="txt">#<span>클래식소사이어티</span></p>
+											<p class="tit">[오페라] 코지 판 투테</p>
+										<p class="summary">
+											[상영 정보]<br>- 상영 지점 : 코엑스, 센트럴, 목동, 킨텍스, 분당, 성수, 세종청사<br>- 러닝 타임 : 152분 * 인터미션 없음<br>- 상영 일정 : 2021년 4월 18일(일) ~ 2021년 6월 9일(수) / 수 19:00 (목동, 킨텍스, 센트럴 14:00), 일 14:00 상영<br>*거리두기 단계에 따라 평일 저녁 상영 시간은 조정될 수 있습니다<br>- 배급사 사정에 따라 상영 일정 및 지점 등이 변경될 수 있습니다.<br><br><br>이벤트 기간 : 4/18~4/28 (총 4회차)<br>내용 : 20% 할인된 가격으로 모차르트의 '코지 판 투테'를 만나 보세요!<br>*성인 티켓가에 한해 할인, 클래식 소사이어티 10% 할인 쿠폰 중복 적용 가능<br><br>[시놉시스]<br>철학자 돈 알폰소는 약혼녀의 미모와 정숙함을 자랑하는 굴리엘모와 페란도의 말에 코웃음을 친다. 약혼녀를 믿는 두 청년은 다른 유혹이 찾아왔을 때 연인이 정절을 지킬지 돈 알폰소와 내기를 한다. 다른 남자로 변장한 둘은 약혼녀, 피오르딜리지와 도라벨라 앞에 나타나 유혹하고, 굳건한 정절을 다짐하던 약혼녀는 계속된 구애에 마음이 점점 흔들린다.<br><br>[작품소개]<br>잘츠부르크 페스티벌은 매년 여름, 모차르트의 고향 오스트리아 잘츠부르크에서 열리는 세계적인 클래식 음악 축제다. 페스티벌 100주년을 맞아 공연된 최신작으로 코로나19 팬데믹으로 전 세계가 위기를 맞은 가운데 이례적으로 무대에 오른 오페라다. 페스티벌 역사상 첫 여성 오페라 지휘자, 말비츠와 모차르트 오페라 연출로 유명한 로이가 압축한 버전으로 진행되는 이번 프로덕션은 긴장감 넘치는 줄거리를 효과적으로 살리며 호평받았다.<br>모차르트와 콤비를 이뤄 수많은 명작을 탄생시킨 대본 작가 다 폰테의 천재적인 유머 감각을 살려 창작된 오페라 부파로 제목은 ‘여자는 다 그래’라는 뜻을 갖고 있다. 남녀 사이의 심리전을 밝은 분위기로 그린 도입부는 사랑을 의심하는 인간적인 본성을 다루며 진지한 고뇌로 이어진다. 우아하고 관능적인 분위기를 넘나드는 음악은 2중창에서 6중창까지 다양한 형태의 앙상블로 이어지며 귀를 즐겁게 한다. <br><br>[작품 정보]<br>제작 및 출연<br>작곡: 볼프강 아마데우스 모차르트 Wolfgang Amadeus Mozart<br>대본: 로렌초 다 폰테 Lorenzo Da Ponte<br>지휘: 요아나 말비츠 Joana Mallwitz<br>연주: 빈 필하모닉 Vienna Philharmonic <br>연출: 크리스토프 로이 Christof Loy<br>장소: 잘츠부르크 대축전극장 Großes Festspielhaus, Salzburg<br><br>피오르딜리지:	엘자 드라이지히 Elsa Dreisig<br>굴리엘모:	안드레 슈엔 Andrè Schuen<br>도라벨라:	마리안느 크레바사 Marianne Crebassa<br>페란도:		보그단 볼코브 Bogdan Volkov<br>데스피나:	레아 데잔드레 Lea Desandre<br>돈 알폰소:	요하네스 마르틴 크랜츨 Johannes Martin Kränzle<br><br>[주요 아리아]<br>피오르딜리지, 도라벨라의 2중창 ‘이렇게 아름다운 입술이 있을까’<br>피오르딜리지, 도라벨라, 알폰소의 3중창 ‘바람은 부드럽고 물결은 잔잔하기를’<br>페란도의 아리아 ‘사랑의 산들바람은’<br>피오르딜리지의 론도 ‘내 사랑, 내 실수를 용서해줘요’<br><br>수입/배급 케빈앤컴퍼니</p>
+									</div>
+								</div>
+								<!--// curr-img -->
+
+								<!--// list-area -->
+								<div class="list">
+							 	<ul>
+									<li>
+										<a href="javascript:gfn_moveDetail('21020500');" title="영화상세 보기">
+										<p class="bage film">필름소사이어티</p>
+											<div class="img"><img src="https://img.megabox.co.kr/SharedImg/2021/03/25/4BhaVtrxlNF8gpoN58EqW7TxHb0pKy2p_230.jpg" alt="노매드랜드" onerror="noImg(this, 'main');"></div>
+
+											<p class="tit">노매드랜드</p>
+
+											<p class="summary">
+												전 세계가 동행한 가슴 벅찬 여정, 길이 계속되는 한 우리의 삶도 계속된다.
+모든 것이 무너진 후에야 비로소 열리는 새로운 길 그리고 희망
+
+경제적 붕괴로 도시 전체가 무너진 후 홀로 남겨진 ‘펀’.(프란시스 맥도맨드)
+추억이 깃든 도시를 떠나 작은 밴과 함께 한 번도 가보지 않은 낯선 길 위의 세상으로 떠난다.
+그곳에서 ‘펀’은 각자의 사연을 가진 노매드들을 만나게 되고,
+광활한 자연과 길 위에서의 삶을 스스로 선택한 그들과 만나고 헤어지며
+다시 살아가기 위한 여정을 시작하는데…</p>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:gfn_moveDetail('20048500');" title="영화상세 보기">
+										<p class="bage film">필름소사이어티</p>
+											<div class="img"><img src="https://img.megabox.co.kr/SharedImg/2020/09/21/pcNkdKb9GRUvPb4vlJrXWAgdlbs9O1tg_230.jpg" alt="부활: 그 증거" onerror="noImg(this, 'main');"></div>
+
+											<p class="tit">부활: 그 증거</p>
+
+											<p class="summary">
+												죽음의 두려움이 영원한 소망으로 바뀌는 시간!
+모든 종교는 죽음 너머의 세상에 관심이 있지만
+종교를 가진 사람들조차
+죽음은 두려움과 공포의 대상이다.
+
+이용규 교수, 배우 권오중, 이성혜는
+고통 때문에 다시 태어나지 않기를 소망하는 사람들과
+고통 속에서도 부활의 소망을 갖고 살았던 사람들의 흔적을 찾는다.
+인도 바라나시와 첸나이 그리고 이탈리아 로마에 있는 카타콤.
+산 자와 죽은 자들 사이에서 보고 듣는 삶과 죽음, 그리고 부활.
+
+현대의 가장 큰 문제는 죽음이 죽어버렸다는 이어령 교수와 이들의 여정은
+마침내 말기 암 판정을 받은 후, 80차 항암치료를 하며
+부활의 증인이 된 한 사람(천정은)을 만나게 되는데... </p>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:gfn_moveDetail('20004800');" title="영화상세 보기">
+										<p class="bage film">필름소사이어티</p>
+											<div class="img"><img src="https://img.megabox.co.kr/SharedImg/2021/03/24/9rNkLXZrl8ZnQsKFjy9ddOkK553ISin4_230.jpg" alt="패왕별희 디 오리지널" onerror="noImg(this, 'main');"></div>
+
+											<p class="tit">패왕별희 디 오리지널</p>
+
+											<p class="summary">
+												어렸을 때부터 함께 경극을 해온 ‘두지’(장국영)와 ‘시투’(장풍의). 
+세상에 둘도 없는 절친한 아우와 형이지만, 
+‘두지’는 남몰래 ‘시투’에 대한 마음을 품고 있다.
+
+하지만 ‘시투’는 여인 ‘주샨’(공리)에 마음을 빼앗기고, 
+그로 인해 ‘두지’는 감정의 소용돌이에 빠지게 되는데…
+
+사랑과 운명, 아름다움을 뒤바꾼 화려한 막이 열린다! </p>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:gfn_moveDetail('21026300');" title="영화상세 보기">
+										<p class="bage film">필름소사이어티</p>
+											<div class="img"><img src="https://img.megabox.co.kr/SharedImg/2021/04/16/kdhqqwklbf6fWsdnTmEyUdDD0UaULHro_230.jpg" alt="어른들은 몰라요" onerror="noImg(this, 'main');"></div>
+
+											<p class="tit">어른들은 몰라요</p>
+
+											<p class="summary">
+												18세 ‘세진’, 덜컥 임산부가 되어버렸다.
+무책임한 어른들에 지쳐 거리를 떠돌던 ‘세진’은
+가출 경력 4년 차, 동갑내기 ‘주영’을 만난다.
+
+처음 만났지만 절친이 된 ‘세진’과 ‘주영’,
+위기의 순간 나타난 파랑머리 ‘재필’과 ‘신지’까지
+왠지 닮은 듯한 네 명이 모여 ‘세진’의 유산 프로젝트가 시작된다.
+
+“우리도 살아야 되잖아요.”
+어른들은 모르는 가장 솔직한 10대들의 이야기</p>
+										</a>
+									</li>
+									</ul>
+
+								</div>
+								<!--// list-area -->
+
+					</div>
+					<!--// curation-area -->
+				</div>
+			</div>
+            <div id="main_section04" class="section main-info">
+
+				<h2 class="tit">메가박스 안내</h2>
+
+				<div class="info-special">
+					<a href="/specialtheater/dolby" title="Dolby Cinema 페이지로 이동" class="bg-dolby">Dolby Cinema</a>
+							<a href="/specialtheater/boutique/private" title="THE BOUTIQUE PRIVATE 페이지로 이동" class="bg-private">THE BOUTIQUE PRIVATE</a>
+						<a href="/specialtheater/boutique" title="THE BOUTIQUE 페이지로 이동" class="bg-boutique">THE BOUTIQUE</a>
+							<a href="/specialtheater/mx" title="MX 페이지로 이동" class="bg-mx">MX</a>
+							<a href="/specialtheater/comfort" title="COMFORT 페이지로 이동" class="bg-comfort">COMFORT</a>
+							<a href="/specialtheater/megakids" title="MEGABOX KIDS 페이지로 이동" class="bg-kids">MEGABOX KIDS</a>
+							</div>
+
+				<!-- info-notice -->
+				<div class="info-notice">
+						<div class="wrap">
+							<p class="tit">지점</p>
+							<p class="link">
+								<a href="/support/notice/detail?artiNo=10326&amp;bbsNo=9" title="공지사항 상세보기">
+									<strong>
+										[코엑스]
+									</strong>
+									 [코엑스지점] 돌비시네마 상영관 주말 상영스케줄 안내(4/24~26)</a>
+							</p>
+
+							<p class="date">2021.04.22</p>
+							<p class="more">
+								<a href="/support/notice" title="전체공지 더보기">더보기 <i class="iconset ico-arr-right-gray"></i></a>
+							</p>
+						</div>
+					</div>
+				<!--// info-notice -->
+
+				<!-- info-link -->
+				<div class="info-link">
+					<div class="table">
+						<div class="cell">
+							<a href="/support" title="고객센터 페이지로 이동">
+								<i class="iconset ico-main-customer"></i>
+								<span>고객센터</span>
+							</a>
+						</div>
+
+						<div class="cell">
+							<a href="/support/faq" title="자주 묻는 질문 페이지로 이동">
+								<i class="iconset ico-main-faq"></i>
+								<span>자주 묻는 질문</span>
+							</a>
+						</div>
+
+						<div class="cell">
+							<a href="/support/inquiry" title="1:1 문의 페이지로 이동">
+								<i class="iconset ico-main-qna"></i>
+								<span>1:1 문의</span>
+							</a>
+						</div>
+
+						<div class="cell">
+							<a href="/support/rent" title="단체/대관문의 페이지로 이동">
+								<i class="iconset ico-main-group"></i>
+								<span>단체/대관문의</span>
+							</a>
+						</div>
+
+						<div class="cell">
+							<a href="/support/lost" title="분실물 문의/접수 페이지로 이동">
+								<i class="iconset ico-main-lost"></i>
+								<span>분실물 문의/접수</span>
+							</a>
+						</div>
+
+						<div class="cell">
+							<a href="/booking/privatebooking" title="더 부티크 프라이빗 대관예매 페이지로 이동">
+								<i class="iconset ico-main-boutique"></i>
+								<span>더 부티크 프라이빗<br>대관예매</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<!--// info-link -->
+			</div>
+            <div class="main-bottom-ad">
+				<script data-id="K3I6ffWoQiqG93YqqRV0LA" name="megabox_p/main/main@main_bottom_1100x227?mlink=342" src="//cast.imp.joins.com/persona.js" async=""></script><script src="//cast.imp.joins.com/body/K3I6ffWoQiqG93YqqRV0LA/ANVfpb516L549ityARKeBSZhRglpr42NOOGAGiuH70uEAM4qWzAZAbYtY0p3UTJjUFF4TzY4N3Q2T2tWZmZnAstB2B9IMj8pFgPLQdgfSDI_KRY.js"></script><div id="K3I6ffWoQiqG93YqqRV0LA"><iframe src="//ad.imp.joins.com/html/megabox_p/main/main@main_bottom_1100x227?_cid=K3I6ffWoQiqG93YqqRV0LA&amp;_uid=ANVfpb516L549ityARKeBSZhRglpr42NOOGAGiuH70uEAM4qWzAZAbYtY0p3UTJjUFF4TzY4N3Q2T2tWZmZnAstB2B9IMj8pFgPLQdgfSDI_KRY&amp;_ref=https%3A%2F%2Fwww.megabox.co.kr%2F" title="메인 하단 배너영역" height="227px" width="100%" name="mliframe" scrolling="no" frameborder="0" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0"></iframe></div>
+			</div>
+            
+            <footer id="footer">
+                <!-- footer-top -->
+                <div class="footer-top">
+                    <div class="inner-wrap">
+                        <ul class="fnb">
+                            <li><a href="/megaboxinfo" title="회사소개 페이지로 이동">회사소개</a></li>
+                            <li><a href="/recruit" title="인재채용 페이지로 이동">인재채용</a></li>
+                            <li><a href="/socialcontribution" title="사회공헌 페이지로 이동">사회공헌</a></li>
+                            <li><a href="/partner" title="제휴/광고/부대사업문의 페이지로 이동">제휴/광고/부대사업문의</a></li>
+                            <li><a href="/support/terms" title="이용약관 페이지로 이동">이용약관</a></li>
+                            <li class="privacy"><a href="/support/privacy" title="개인정보처리방침 페이지로 이동">개인정보처리방침</a></li>
+                            <li><a href="https://jebo.joonganggroup.com/main.do" target="_blank" title="윤리경영 페이지로 이동">윤리경영</a></li>
+                        </ul>
+            
+                        <a href="#layer_looking_theater" class="btn-looking-theater" title="극장찾기"><i class="iconset ico-footer-search"></i> 극장찾기</a>
+                    </div>
+                </div>
+                <!--// footer-top -->
+            
+                <!-- footer-bottom -->
+                <div class="footer-bottom">
+                    <div class="inner-wrap">
+                        <div class="ci">MEGABOX : Life Theater</div>
+            
+                        <div class="footer-info">
+                            <div>
+                                <address>서울특별시 마포구 월드컵로 240, 지상2층(성산동, 월드컵주경기장)</address>
+                                <p>ARS 1544-0070</p>
+                            </div>
+                            <p>대표자명 김진선</p>
+                            <p>· 개인정보보호책임자 조상연</p>
+                            <p>· 사업자등록번호 211-86-59478</p>
+                            <p>· 통신판매업신고번호 제 833호</p>
+                            <p class="copy">COPYRIGHT © MegaboxJoongAng, Inc. All rights reserved</p>
+                        </div>
+            
+                        <div class="footer-sns">
+                            <a href="https://twitter.com/megaboxon" target="_blank" title="MEGABOX 트위터 페이지로 이동"><i class="iconset ico-twitter">트위터</i></a>
+                            <a href="https://www.facebook.com/megaboxon" target="_blank" title="MEGABOX 페이스북 페이지로 이동"><i class="iconset ico-facebook">페이스북</i></a>
+                            <a href="http://instagram.com/megaboxon" target="_blank" title="MEGABOX 인스타그램 페이지로 이동"><i class="iconset ico-instagram">인스타그램</i></a>
+                            <a href="https://play.google.com/store/apps/details?id=com.megabox.mop" target="_blank" title="MEGABOX 구글플레이 페이지로 이동"><i class="iconset ico-googleplay">구글플레이</i></a>
+                            <a href="https://itunes.apple.com/kr/app/megabox/id894443858?l=ko&amp;ls=1&amp;mt=8" target="_blank" title="MEGABOX 앱스토어 페이지로 이동"><i class="iconset ico-appstore">앱스토어</i></a>
+                        </div>
+                    </div>
+                </div>
+                <!--// footer-bottom -->
+                <div id="layer_looking_theater" class="layer-looking-theater"></div>
+            </footer>
+        </div> 
+    </div>
+
+
+
+
+    <!--jquery 연동-->
+    <script src="./js/jquery.min.js"></script>
+
+
+    
+</body>
+</html>
